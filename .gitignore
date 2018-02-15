@@ -8,5 +8,6 @@ idea/*
 *.iml
 *.pyc
 settings.py
-
+logs
+logs/
 
