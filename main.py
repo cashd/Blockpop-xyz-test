@@ -29,6 +29,7 @@ class BaseHandler(tornado.web.RequestHandler):
 class MainHandler(BaseHandler):
     @tornado.web.authenticated
     def get(self):
+        self.set_secure_cookie('test_cookie', 'test string', domain= DOMAIN)
         self.write(str(self.request))
         self.render('proto_test.html', domain = DOMAIN_BLOCK)
 
@@ -86,6 +87,7 @@ class LogoutHandler(BaseHandler):
 class LoginHandler(BaseHandler):
     def get(self):
         if self.get_current_user() is None:
+            self.set_secure_cookie('test_cookie', 'test string', domain= DOMAIN)
             self.render('proto_login.html', domain = DOMAIN_BLOCK)
         else:
             self.redirect("/")
@@ -154,7 +156,7 @@ class Application(tornado.web.Application):
             "template_path":TEMPLATE_PATH,
             "static_path":STATIC_PATH,
             "debug":DEBUG,
-            "cookie_secret": '0TiDeqFE7CP4RettuEtmt1iOiSkeXB3V',
+            "cookie_secret": COOKIE_SECRET,
             "login_url": "/login/"
         }
         tornado.web.Application.__init__(self, handlers, **settings)
