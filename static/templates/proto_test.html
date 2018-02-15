@@ -1,0 +1,56 @@
+<style>
+  body {
+  padding-top: 80px;
+  text-align: center;
+  font-family: monaco, monospace;
+  background: linear-gradient(to bottom, #ffffff 0%,#e5e5e5 100%);
+  background-size: cover;
+}
+
+.button {
+    background-color: #E1AB0F;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.button:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+input[type=text] {
+    width: 400px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: none;
+    background-color: #E1AB0F;
+    color: white;
+}
+</style>
+
+<body>
+  <h1> you are logged in as <h1>
+  <a class="button" onclick="Open()">Launch</a>
+  <br>
+  <br>
+
+  <form action='#'>
+  <label for="fname">Update Bitcoin Address</label>
+  <input type="text" id="fname" name="btc_update" value="Click Submit to update Bitcoin Address">
+  <input class='button' type='submit' value="Submit">
+</form>
+</body>
+
+
+<script>
+function Open() {
+    var myWindow = window.open("https://{{domain}}/asdf/", "", "width=600,height=200");
+}
+</script>

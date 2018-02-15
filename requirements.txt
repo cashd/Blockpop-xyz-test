@@ -1,0 +1,11 @@
+bitcoin==1.1.42
+blockcypher==1.0.72
+certifi==2017.7.27.1
+chardet==3.0.4
+idna==2.6
+peewee==2.10.2
+python-dateutil==2.6.1
+requests==2.18.4
+six==1.11.0
+tornado==4.5.2
+urllib3==1.22

@@ -1,0 +1,12 @@
+env
+env/
+__pycache__
+.xml
+.idea/*
+*.db
+idea/*
+*.iml
+*.pyc
+settings.py
+
+

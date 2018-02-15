@@ -1,0 +1,12 @@
+HANDLERS
+
+/createaccount
+redirect from logging in with twitch
+takes twitch ID
+
+
+/add_btc_address
+takes btc address and using bitcypher
+addes event for confirmed-tx
+
+
