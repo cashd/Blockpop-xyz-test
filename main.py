@@ -88,7 +88,7 @@ class LoginHandler(BaseHandler):
     def get(self):
         if self.get_current_user() is None:
             self.set_secure_cookie('test_cookie', 'test string', domain= DOMAIN)
-            self.render('proto_login.html', domain = DOMAIN_BLOCK)
+            self.render('proto_login.html', domain = DOMAIN_BLOCK, twitch_id = TWITCH_CLIENT_ID)
         else:
             self.redirect("/")
 
